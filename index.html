@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<!-- WELCOME -->
+<section class="page active" id="welcome">
+    <div class="glass">
+
+        <h3>🎂 Happy Birthday 🎂</h3>
+
+        <h1>My Lovely Girlfriend ❤️</h1>
+
+        <p>Today is your special day… I planned something just for you.</p>
+
+        <p class="question">Will you go on a birthday date with me?</p>
+
+        <div class="buttons">
+            <button class="yesBtn" onclick="acceptDate()">💖 YES</button>
+            <button class="noBtn" id="noBtn">🙈 NO</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- MESSAGE -->
+<section class="page" id="messagePage">
+    <div class="glass">
+
+        <h2 id="answerTitle"></h2>
+        <p id="answerMessage"></p>
+
+        <button class="nextBtn" onclick="showItinerary()">Continue ❤️</button>
+
+    </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="page" id="itineraryPage">
+    <div class="glass large">
+
+        <h2>🎂 Birthday Itinerary</h2>
+
+        <p class="subtext">
+            A simple day planned with love, just for you ❤️
+        </p>
+
+        <div class="timeline">
+
+            <div class="card">
+                <span>🚗</span>
+                <div>
+                    <h4>11:00 AM</h4>
+                    <p>Pickup — Birthday Celebration Journey Starts ❤️</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>🍽️</span>
+                <div>
+                    <h4>12:00 PM</h4>
+                    <p>Lunch at Vivamore Dining, Nu Sentral</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>💼</span>
+                <div>
+                    <h4>2:45 PM</h4>
+                    <p>Breakout Room at NU Sentral</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>🌸</span>
+                <div>
+                    <h4>4:00 PM</h4>
+                    <p>Pasar Seni — Buy Flowers 💐</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>☕</span>
+                <div>
+                    <h4>5:00 PM</h4>
+                    <p>Café ETC — Minum Petang</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>🏠</span>
+                <div>
+                    <h4>6:00 PM</h4>
+                    <p>Back to Cyberjaya 🥲</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="nextBtn" onclick="showLetter()">One More Thing 💌</button>
+
+    </div>
+</section>
+
+<!-- LETTER -->
+<section class="page" id="letterPage">
+    <div class="glass large">
+
+        <h2>💌 A Message for You</h2>
+
+        <p id="typingText"></p>
+
+        <button class="nextBtn" onclick="showFinal()">Open Gift 🎁</button>
+
+    </div>
+</section>
+
+<!-- FINAL -->
+<section class="page" id="finalPage">
+    <div class="glass">
+
+        <h1>🎉 Surprise 🎉</h1>
+        <h2>I Love You ❤️</h2>
+
+        <p>You are my favorite part of every day.</p>
+
+        <div class="bigHeart">❤️</div>
+
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
