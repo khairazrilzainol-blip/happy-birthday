@@ -38,6 +38,10 @@ width:100%;
 box-shadow:0 20px 60px rgba(0,0,0,0.15);
 }
 
+.card.large{
+max-width:750px;
+}
+
 /* text */
 h1{
 font-family:'Great Vibes', cursive;
@@ -87,7 +91,12 @@ color:white;
 
 .no{
 background:#ddd;
-position:relative;
+}
+
+.next{
+background:#ff4f87;
+color:white;
+margin-top:15px;
 }
 
 /* timeline */
@@ -115,11 +124,41 @@ animation:pulse 1.5s infinite;
 50%{transform:scale(1.2);}
 }
 
-/* floating hearts */
-.background-hearts{
+/* popup */
+.popup{
 position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
+background:rgba(0,0,0,0.4);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.popup.hidden{
+display:none;
+}
+
+.popup-box{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+width:80%;
+max-width:300px;
+}
+
+.popup-box h2{
+color:#ff4f87;
+}
+
+.popup-box button{
+margin-top:15px;
+background:#ff4f87;
+color:white;
 }
 
 /* mobile */
