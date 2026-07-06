@@ -7,6 +7,7 @@ final: document.getElementById("final")
 };
 
 const noBtn = document.getElementById("noBtn");
+const popup = document.getElementById("popup");
 
 /* YES */
 function goYes(){
@@ -43,11 +44,13 @@ confetti({ particleCount: 150, spread: 100 });
 }
 
 /* TYPE LETTER */
-const text = `Happy Birthday Atikah ❤️
+const text = `
+Happy Birthday Atikah ❤️
 
-Thank you for being part of my life.
+Thank you for being in my life.
 
-I hope today makes you smile always ❤️`;
+I hope today brings you happiness ❤️
+`;
 
 let i = 0;
 
@@ -61,34 +64,11 @@ setTimeout(typeLetter, 25);
 }
 }
 
-/* FIXED NO BUTTON (iPhone SAFE) */
-let active = false;
-
-function moveNo(){
-
-if(!active){
-noBtn.style.position = "fixed";
-noBtn.style.zIndex = "999";
-active = true;
-}
-
-const maxX = window.innerWidth - noBtn.offsetWidth - 20;
-const maxY = window.innerHeight - noBtn.offsetHeight - 20;
-
-let x = Math.random() * maxX;
-let y = Math.random() * maxY;
-
-y = Math.max(80, y);
-
-noBtn.style.left = x + "px";
-noBtn.style.top = y + "px";
-}
-
-/* desktop */
-noBtn.addEventListener("mouseenter", moveNo);
-
-/* mobile */
-noBtn.addEventListener("touchstart", function(e){
-e.preventDefault();
-moveNo();
+/* POPUP NO BUTTON */
+noBtn.addEventListener("click", function(){
+popup.classList.remove("hidden");
 });
+
+function closePopup(){
+popup.classList.add("hidden");
+}
